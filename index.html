@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <title>Process Improver</title>
+    <title>Education</title>
     <!-- Scripts -->
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/dataframe.js"></script>
@@ -34,8 +34,8 @@
     <!-- Progress Bar End-->
     <div class="wrapper clearfix">
         <!-- Spinner start-->
-        <div class="overlay page-spinner" style="display: none;"></div>
-        <div class="overlay1 page-spinner" style="display: none;">
+        <div class="overlay page-spinner" style=""></div>
+        <div class="overlay1 page-spinner" style="">
                 <div class="spinner"></div>
         </div>
         <!-- Spinner end-->
@@ -44,7 +44,7 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Software Quality Management</a>
+                    <a class="navbar-brand" href="#">Education</a>
                 </div>
             </div>
         </nav>
@@ -55,8 +55,8 @@
           <div class="row">
             <div class="col-xs-12">
               <blockquote class="blockquote-reverse">
-                <p><storng>Software quality management</storng> is a management process that aims to develop and manage the quality of software to make sure the product satisfies the user.</p>
-                <small> <cite title="Source Title">- The International Organization for Standardization</cite></small>
+                <p>Education is what remians after one has forgotten everything he learned <strong>in school</strong></p>
+                <small> <cite title="Source Title">- Einstein</cite></small>
               </blockquote>
             </div>
             <div class="col-xs-12">
@@ -66,109 +66,68 @@
                 </div>
                 <div class="panel-body">
                   <ul class="nav nav-tabs select-datasets-tab">
-                      <li class="active"><a href="#dataset1" data-toggle="tab">New Projects</a></li>
-                      <li><a href="#dataset2" data-toggle="tab">Update a Project</a></li>
-                      <li><a href="#dataset3" data-toggle="tab">Record Milestone Completion Dates</a></li>
-                      <li><a href="#dataset4" data-toggle="tab">Manage Resources</a></li>
-                      <li><a href="#dataset5" data-toggle="tab">Record Tasks Completion Dates</a></li>
-                      <li><a href="#dataset6" data-toggle="tab">Record Defects</a></li>
-                      <li><a href="#dataset7" data-toggle="tab">Record Problem Solution</a></li>
-                      <li><a href="#dataset8" data-toggle="tab">Record Lessons Learned</a></li>
-                      <li><a href="#dataset9" data-toggle="tab">Employees Training</a></li>
-                      <li><a href="#dataset10" data-toggle="tab">Rate an Engineer</a></li>
-                      <li><a href="#dataset11" data-toggle="tab">View Completed Projects</a></li>
+                      <li class="active"><a href="#dataset1" data-toggle="tab" dataset-name="Project" dataset-id="dataset1" data-toggle="tab">New Projects</a></li>
+                      
+                      <li><a href="#dataset2" data-toggle="tab" dataset-name="Blank" dataset-id="dataset2">Update a Project</a></li>
+                      
+                      <li><a href="#dataset3" data-toggle="tab" dataset-name="Blank" dataset-id="dataset3">Record Milestone Completion Dates</a></li>
+                      
+                      <li><a href="#dataset4" data-toggle="tab" dataset-name="Resources_Data" dataset-id="dataset4">Manage Resources</a></li>
+                      
+                      <li><a href="#dataset5" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record Tasks Completion Dates</a></li>
+
+                      <li><a href="#dataset6" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record Defects</a></li>
+
+                      <li><a href="#dataset7" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record a Problem &apm; Solution</a></li>
+
+                      <li><a href="#dataset8" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record Lessons Learned</a></li>
+
+                      <li><a href="#dataset9" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Employees Training</a></li>
+
+                      <li><a href="#dataset10" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Rate an Engineer</a></li>
+
+                      <li><a href="#dataset11" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">View Completed Projects</a></li>
+
+
+
+
                     </ul>
                     <div id="myTabContent" class="tab-content">
-                      <div class="tab-pane fade active in" id="dataset1">
+                      <div class="tab-pane fade active in" id="dataset1" dataset-name="Project">
                         <div class="col-xs-12 table-overflow">
-                          <h6><strong>Proejcts</strong></h6>
-                          <table class="table table-striped dataset-table">
-                            <thead>
-                              <tr>
-                                <th>Resource ID ID</th>
-                                <th>Project Name</th>
-                                <th>Tools Used</th>
-                                <th>Comments</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>400018</td>
-                                <td>Mercy Hospita</td>
-                                <td>Visual Studio, Testing Tools etc</td>
-                                <td>Testing in Progress</td>
-                              </tr>
-                              <tr>
-                                <td>400019</td>
-                                <td>Illinois Institute of Technology</td>
-                                <td>Tools</td>
-                                <td>Completed and No errors</td>
-                              </tr>
-                              
-                            </tbody>
+                          <h6><strong>New Projects</strong></h6>
+                          <table id="dataset1Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
                           </table>
+
                         </div>
-                        <div class="col-xs-12"></div>
-                        <h6><strong>Apply Filters</strong></h6>
+                        <div class="col-xs-12">
+                          <hr>
+                          <h6><strong>Apply Filters</strong></h6>
+                        </div>
                         <form class="form-horizontal">
                           <fieldset>
                             <div class="form-group">
                               <label for="select" class="col-lg-2 control-label">Filter1</label>
                               <div class="col-lg-10">
-                                <select class="form-control" id="select">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
-                                </select>
+                                
                               </div>
                             </div>
                             <div class="form-group">
                             <label for="" class="col-lg-2 control-label">Filter2</label>
                             <div class="col-lg-10">
-                              <div class="checkbox pull-left pdR-15">
-                                <label>
-                                  <input type="checkbox"> Option1
-                                </label>
-                              </div>
-                              <div class="checkbox pull-left pdR-15">
-                                <label>
-                                  <input type="checkbox"> Option2
-                                </label>
-                              </div>
-                              <div class="checkbox pull-left pdR-15">
-                                <label>
-                                  <input type="checkbox"> Option3
-                                </label>
-                              </div>
-                              <div class="checkbox pull-left pdR-15">
-                                <label>
-                                  <input type="checkbox"> Option4
-                                </label>
-                              </div>
-                            </div>
+                              <                            </div>
                           </div>
                           <div class="form-group">
                              <label class="col-lg-2 control-label">Filter3 </label>
                              <div class="col-lg-10">
-                               <div class="radio">
-                                 <label>
-                                   <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                                   Option one is this
-                                 </label>
-                               </div>
-                               <div class="radio">
-                                 <label>
-                                   <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                   Option two can be something else
-                                 </label>
-                               </div>
+                               
                              </div>
                           <div class="form-group">
                              <div class="col-lg-10 col-lg-offset-2 text-right">
                                <button type="reset" class="btn btn-default">Cancel</button>
-                               <button type="submit" class="btn btn-primary mrL-15 mrR-10">Plot Chart</button>
+                               <a href="#" id="PlotChart1" class="btn btn-primary mrL-15 mrR-10">Plot Chart</a>
                              </div>
                            </div>
                           </fieldset>
@@ -184,6 +143,7 @@
                                   </div>
                                   <div id="collapseOne" class="panel-collapse collapse">
                                       <div class="panel-body">
+                                          <h6 class="text-center"><strong>Number of Schools / Zip code</strong></h6>
                                           <canvas id="dataset1BarChart" width="400" height="auto"></canvas>
                                       </div>
                                   </div>
@@ -196,6 +156,7 @@
                                 </div>
                                   <div id="collapseTwo" class="panel-collapse collapse">
                                       <div class="panel-body">
+                                          <h6 class="text-center"><strong>School and their Safety</strong></h6>
                                           <canvas id="dataset1PieChart" width="400" height="100"></canvas>
                                       </div>
                                   </div>
@@ -209,6 +170,7 @@
                                 </div>
                                   <div id="collapseThree" class="panel-collapse collapse">
                                       <div class="panel-body">
+                                        <h6 class="text-center"><strong>Schools / Zip code</strong></h6>
                                           <canvas id="dataset1LineChart" width="400" height="auto"></canvas>
                                       </div>
                                   </div>
@@ -240,50 +202,101 @@
                           </div>
 
                       </div>
- <!-- <li class="active"><a href="#dataset1" data-toggle="tab">New Projects</a></li>
-                      <li><a href="#dataset2" data-toggle="tab">Update a Project</a></li>
-                      <li><a href="#dataset3" data-toggle="tab">View Completed Projects</a></li>
-                      <li><a href="#dataset4" data-toggle="tab">Record Milestone Completion Dates</a></li>
-                      <li><a href="#dataset5" data-toggle="tab">Manage Resources</a></li>
-                      <li><a href="#dataset6" data-toggle="tab">Record Tasks Completion Dates</a></li>
-                      <li><a href="#dataset7" data-toggle="tab">Record a Problem &amp; Solution</a></li>
-                      <li><a href="#dataset8" data-toggle="tab">Record Lessons Learned</a></li>
-                      <li><a href="#dataset9" data-toggle="tab">Tools Used</a></li>
-                      <li><a href="#dataset10" data-toggle="tab">Employees Training</a></li>
-                      <li><a href="#dataset11" data-toggle="tab">Rate an Engineer</a></li>
-                      <li><a href="#dataset12" data-toggle="tab">Questions From Customer</a></li>
-                    </ul> -->
+
+
+
                       </div>
-                      <div class="tab-pane fade" id="dataset2">
-                        <h6><strong>Updata a Project</strong></h6>
+                      <div class="tab-pane fade" id="dataset2" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Update a Project</strong></h6>
+                          <table id="dataset2Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
+
                       </div>
-                      <div class="tab-pane fade" id="dataset3">
-                        <h6><strong>Record Milestone Completion Dates</strong></h6>
+                      <div class="tab-pane fade" id="dataset3" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Record Milestone Completion Dates</strong></h6>
+                          <table id="dataset3Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
                       </div>
-                      <div class="tab-pane fade" id="dataset4">
-                        <h6><strong>Manage Resources</strong></h6>
+                      <div class="tab-pane fade" id="dataset4" dataset-name="Resources_Data">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Manage Resources</strong></h6>
+                          <table id="dataset4Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
                       </div>
-                      <div class="tab-pane fade" id="dataset5">
-                        <h6><strong>Record Task Completion Dates</strong></h6>
+                      <div class="tab-pane fade" id="dataset5" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Record Tasks Completion Dates</strong></h6>
+                          <table id="dataset5Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
                       </div>
-                      <div class="tab-pane fade" id="dataset6">
-                        <h6><strong>Record Defects</strong></h6>
+                       <div class="tab-pane fade" id="dataset6" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Record Defects</strong></h6>
+                          <table id="dataset6Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
                       </div>
-                      <div class="tab-pane fade" id="dataset7">
-                        <h6><strong>Record a Problem &amp; Solution</strong></h6>
-                       </div>
-                       <div class="tab-pane fade" id="dataset8">
-                        <h6><strong>Record Lesson Learned</strong></h6>
-                       </div>
-                       <div class="tab-pane fade" id="dataset9">
-                        <h6><strong>Employees Training</strong></h6>
-                       </div>
-                       <div class="tab-pane fade" id="dataset10">
-                        <h6><strong>Rate an Engineer</strong></h6>
-                       </div>
-                       <div class="tab-pane fade" id="dataset11">
-                        <h6><strong>View Completed Projects</strong></h6>
-                       </div>
+                       <div class="tab-pane fade" id="dataset7" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Record a Problem &apm; Solution</strong></h6>
+                          <table id="dataset7Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                       <div class="tab-pane fade" id="dataset8" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Record Lessons Learned</strong></h6>
+                          <table id="dataset8Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                       <div class="tab-pane fade" id="dataset9" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Employees Training</strong></h6>
+                          <table id="dataset9Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                       <div class="tab-pane fade" id="dataset10" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>Rate an Engineer</strong></h6>
+                          <table id="dataset10Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                       <div class="tab-pane fade" id="dataset11" dataset-name="Blank">
+                        <div class="col-xs-12 table-overflow">
+                          <h6><strong>View Completed Projects</strong></h6>
+                          <table id="dataset11Table" class="table table-striped dataset-table">
+                              <thead></thead>
+                              <tbody class="tbody"></tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
@@ -291,6 +304,7 @@
 
           </div>
         </div>
+
 
     </div>
 
@@ -300,7 +314,7 @@
         <div class="container-fluid">
             <div class="col-md-12 mrT-5 mrB-10">
                 <div class="row clear-both color-grey">
-                    <div class="text-center footer-links">©2017 Software Quality Management
+                    <div class="text-center footer-links">©2017 Education- UML
                     </div>
                 </div>
 
@@ -310,7 +324,7 @@
     <!--Footer Ends-->
     <!-- Modal for Confirm Test Submission Start -->
     <div id="feedFoodPopup" class="modal">
-        <div class="modal-dialog">
+         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header pdB-10">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -359,180 +373,286 @@
     </div>
     <!-- Modal for Confirm Test Submission End -->
     <!-- <script type="text/javascript" src="js/Common.js"></script> -->
+
+    <script type="text/javascript" src="js/extractData.js"></script>
     <script type="text/javascript">
+      $(window).on('load', function () {
+        var test = new Datasets();
+      });
+    </script>
+    <script type="text/javascript">
+      $("#PlotChart1").on('click', function (e) {
+        e.preventDefault();
+        var getBarChartData = new BarChart('Ch_PS_11-12');
+        getBarChartData.plotBarchart();
+        var getLineChartData = new LineChart('Ch_PS_11-12');
+        getLineChartData.plotLinechart();
+        var getPieChartData = new PieChart('Ch_PS_11-12');
+        getPieChartData.plotPiechart();
+        var getDoughnutChartData = new DoughnutChart('Ch_PS_11-12');
+        getDoughnutChartData.plotDoughnutchart();
+
+        var getStackChartData = new StackChart('Ch_PS_11-12');
+        var schoolArray = ["Abraham Lincoln Elementary School", "Ambrose Plamondon Elementary School", "Andrew Carnegie Elementary School", "Bret Harte Elementary School", "Carl Schurz High School", "Carter G Woodson South Elementary School"];
+        getStackChartData.plotStackchart(schoolArray);
+        $("#collapseOne").addClass("in");
+
+      });
+    </script>
+    <script type="text/javascript">
+      //Show Page spinner
+      $(document).ready( function () {
+        //$(".page-spinner").show();
+      });
         //var DataFrame = dfjs.DataFrame;
         //const df = new DataFrame(data, columns);
         //DataFrame.fromCSV('datasets/Chicago_Public_Schools___High_School_Progress_Report_Card__2012-2013_.csv').then(df => df);
+        // $(".select-datasets-tab a").on('click', function () {
+        //   var datasetName = $(this).attr("dataset-name");
+        //   var parentDiv = $(this).attr("dataset-id");
+        //   var renderD;
+        //   //console.log(datasetName, parentDiv);
+        //   if ($(this).attr("dataset-id") == "dataset1"){
+        //     renderD = new Dataset1(datasetName, parentDiv);
+        //   } else if ($(this).attr("dataset-id") == "dataset2"){
+        //   //setTimeout( function () {
+        //     renderD = new Dataset2(datasetName, parentDiv);
+        //   //}, 2000);
+        //
+        //   } else if ($(this).attr("dataset-id") == "dataset3"){
+        //     renderD = new Dataset3(datasetName, parentDiv);
+        //   } else if ($(this).attr("dataset-id") == "dataset4"){
+        //     renderD = new Dataset4(datasetName, parentDiv);
+        //   } else {
+        //     renderD = new Dataset5(datasetName, parentDiv);
+        //   }
+        //
+        // });
+        $(window).on('load', function () {
 
+          //Render dataset1
+          renderD = new Dataset1('Project', 'dataset1');
+          //Render dataset2
+          renderD = new Dataset2('', 'dataset2');
+          //Render dataset3
+          renderD = new Dataset3('', 'dataset3');
+          //Render dataset4
+          renderD = new Dataset4('Resources_Data', 'dataset4');
+          //Render dataset5
+          renderD = new Dataset5('', 'dataset5');
+          //Hide Page spinner
+          $(".page-spinner").fadeOut();
+          setTimeout( function () {
+
+          },5000);
+
+        });
 
     </script>
     <script>
     /*Bar Chart Data Start*/
-    var ctxBar = document.getElementById("dataset1BarChart");
-    var barChart = new Chart(ctxBar, {
-      type: 'bar',
-      data: {
-          labels: ["60616", "60618", "60625", "60630", "60635", "60640"],
-          datasets: [{
-              label: '# of Schools',
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)'
-              ],
-              borderColor: [
-                  'rgba(255,99,132,1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
-          }]
-      },
-      options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero:true
-                  }
-              }]
-          }
-      }
-    });
+    // var ctxBar = document.getElementById("dataset1BarChart");
+    // var barChart = new Chart(ctxBar, {
+    //   type: 'bar',
+    //   data: {
+    //       labels: ["60616", "60618", "60625", "60630", "60635", "60640"],
+    //       datasets: [{
+    //           label: '# of Schools',
+    //           data: [12, 19, 3, 5, 2, 3],
+    //           backgroundColor: [
+    //               'rgba(255, 99, 132, 0.2)',
+    //               'rgba(54, 162, 235, 0.2)',
+    //               'rgba(255, 206, 86, 0.2)',
+    //               'rgba(75, 192, 192, 0.2)',
+    //               'rgba(153, 102, 255, 0.2)',
+    //               'rgba(255, 159, 64, 0.2)'
+    //           ],
+    //           borderColor: [
+    //               'rgba(255,99,132,1)',
+    //               'rgba(54, 162, 235, 1)',
+    //               'rgba(255, 206, 86, 1)',
+    //               'rgba(75, 192, 192, 1)',
+    //               'rgba(153, 102, 255, 1)',
+    //               'rgba(255, 159, 64, 1)'
+    //           ],
+    //           borderWidth: 1
+    //       }]
+    //   },
+    //   options: {
+    //       scales: {
+    //           yAxes: [{
+    //               ticks: {
+    //                   beginAtZero:true
+    //               }
+    //           }]
+    //       }
+    //   }
+    // });
     /*Bar Chart End*/
     /*Line Chart Start*/
-    var ctxLine = document.getElementById("dataset1LineChart");
-    var lineChart = new Chart(ctxLine, {
-        type: 'line',
-        data: {
-              labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-                {
-                    label: "My First dataset",
-                    fill: false,
-                    lineTension: 0.1,
-                    backgroundColor: "rgba(75,192,192,0.4)",
-                    borderColor: "rgba(75,192,192,1)",
-                    borderCapStyle: 'butt',
-                    borderDash: [],
-                    borderDashOffset: 0.0,
-                    borderJoinStyle: 'miter',
-                    pointBorderColor: "rgba(75,192,192,1)",
-                    pointBackgroundColor: "#fff",
-                    pointBorderWidth: 1,
-                    pointHoverRadius: 5,
-                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                    pointHoverBorderColor: "rgba(220,220,220,1)",
-                    pointHoverBorderWidth: 2,
-                    pointRadius: 1,
-                    pointHitRadius: 10,
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    spanGaps: false,
-                }
-            ]
-        }
-    });
+    // var ctxLine = document.getElementById("dataset1LineChart");
+    // var lineChart = new Chart(ctxLine, {
+    //     type: 'line',
+    //     data: {
+    //           labels: ["January", "February", "March", "April", "May", "June", "July"],
+    //         datasets: [
+    //             {
+    //                 label: "My First dataset",
+    //                 fill: false,
+    //                 lineTension: 0.1,
+    //                 backgroundColor: "rgba(75,192,192,0.4)",
+    //                 borderColor: "rgba(75,192,192,1)",
+    //                 borderCapStyle: 'butt',
+    //                 borderDash: [],
+    //                 borderDashOffset: 0.0,
+    //                 borderJoinStyle: 'miter',
+    //                 pointBorderColor: "rgba(75,192,192,1)",
+    //                 pointBackgroundColor: "#fff",
+    //                 pointBorderWidth: 1,
+    //                 pointHoverRadius: 5,
+    //                 pointHoverBackgroundColor: "rgba(75,192,192,1)",
+    //                 pointHoverBorderColor: "rgba(220,220,220,1)",
+    //                 pointHoverBorderWidth: 2,
+    //                 pointRadius: 1,
+    //                 pointHitRadius: 10,
+    //                 data: [65, 59, 80, 81, 56, 55, 40],
+    //                 spanGaps: false,
+    //             }
+    //         ]
+    //     }
+    // });
     /*Line Chart End*/
     /*Pie Chart Start*/
-    var ctxPie = document.getElementById("dataset1PieChart");
-    var myPieChart = new Chart(ctxPie,{
-        type: 'pie',
-        data: {
-          labels: [
-              "Red",
-              "Blue",
-              "Yellow"
-          ],
-          datasets: [
-              {
-                  data: [300, 50, 100],
-                  backgroundColor: [
-                      "#FF6384",
-                      "#36A2EB",
-                      "#FFCE56"
-                  ],
-                  hoverBackgroundColor: [
-                      "#FF6384",
-                      "#36A2EB",
-                      "#FFCE56"
-                  ]
-              }]
-            }
-    });
+    // var ctxPie = document.getElementById("dataset1PieChart");
+    // var myPieChart = new Chart(ctxPie,{
+    //     type: 'pie',
+    //     data: {
+    //       labels: [
+    //           "Very Strong",
+    //           "Strong",
+    //           "Average",
+    //           "Weak",
+    //           "Very Weak"
+    //       ],
+    //       datasets: [
+    //           {
+    //               data: [300, 50, 100, 20, 150],
+    //               backgroundColor: [
+    //                   "#FF6384",
+    //                   "#36A2EB",
+    //                   "#FFCE56",
+    //                   "#FFGGHH",
+    //                   "#36A2EE"
+    //               ],
+    //               hoverBackgroundColor: [
+    //                   "#FF6384",
+    //                   "#36A2EB",
+    //                   "#FFCE56",
+    //                   "#FFGGHH",
+    //                   "#36A2EE"
+    //               ]
+    //           }]
+    //         }
+    // });
     /*Pie Chart END*/
     /*Stack Chart Start*/
-    var ctxStack = document.getElementById("dataset1StackChart");
-    var stackChart = new Chart(ctxStack, {
-      type: 'bar',
-      data: {
-          labels: ["60616", "60618", "60625", "60630", "60635", "60640"],
-          datasets: [{
-              label: '# Schools',
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)'
-              ],
-              borderColor: [
-                  'rgba(255,99,132,1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
-          }]
-      },
-      options: {
-          scales: {
-              xAxes: [{
-                  stacked: true
-              }],
-              yAxes: [{
-                  stacked: true
-              }]
-          }
-      }
-    });
+//     var randomScalingFactor = function() {
+//         return Math.round(Math.random() * 100)
+//     };
+//     var ctxStack = document.getElementById("dataset1StackChart");
+//     var stackChart = new Chart(ctxStack, {
+//     type: 'bar',
+//     data: {
+//         labels: ["Abraham Lincoln Elementary School", "Ambrose Plamondon Elementary School", "Andrew Carnegie Elementary School", "Bret Harte Elementary School", "Carl Schurz High School", "Carter G Woodson South Elementary School"],
+//         datasets: [{
+//             label: 'Average Student Attendance %',
+//             data: [10, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255,99,132,1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         },
+// 		{
+//             label: 'Average Teacher Attendance',
+//             data: [15, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 159, 64, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 99, 132, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 159, 64, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 99, 132, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+// 				stacked: true,
+//                 ticks: {
+//                     beginAtZero:true
+//                 }
+//             }],
+//             xAxes: [{
+// 				stacked: true,
+//                 ticks: {
+//                     beginAtZero:true
+//                 }
+//             }]
+//
+//         }
+//     }
+// });
     /*Stack Chart End*/
     /*Dougnut Chart Start*/
-    var ctxDoughnut = document.getElementById("dataset1DoughnutChart");
-    var myDoughnutChart = new Chart(ctxDoughnut, {
-      type: 'doughnut',
-      data: {
-        labels: [
-            "Red",
-            "Blue",
-            "Yellow"
-        ],
-        datasets: [
-            {
-                data: [300, 50, 100],
-                backgroundColor: [
-                    "#FF6384",
-                    "#36A2EB",
-                    "#FFCE56"
-                ],
-                hoverBackgroundColor: [
-                    "#FF6384",
-                    "#36A2EB",
-                    "#FFCE56"
-                ]
-            }]
-          }
-    });
-    /*Dougnut Chart End*/
+    // var ctxDoughnut = document.getElementById("dataset1DoughnutChart");
+    // var myDoughnutChart = new Chart(ctxDoughnut, {
+    //   type: 'doughnut',
+    //   data: {
+    //     labels: [
+    //         "Red",
+    //         "Blue",
+    //         "Yellow"
+    //     ],
+    //     datasets: [
+    //         {
+    //             data: [300, 50, 100],
+    //             backgroundColor: [
+    //                 "#FF6384",
+    //                 "#36A2EB",
+    //                 "#FFCE56"
+    //             ],
+    //             hoverBackgroundColor: [
+    //                 "#FF6384",
+    //                 "#36A2EB",
+    //                 "#FFCE56"
+    //             ]
+    //         }]
+    //       }
+    // });
+    // /*Dougnut Chart End*/
   </script>
     <script type="text/javascript">
         $(document).ready(function () {});
