@@ -1,0 +1,5 @@
+lessonId,problemDesc,solution,rootCause
+1,Form input  error ,give clear insruction,insufficient intruction
+2,Broken workflow,checking for compatilbilty,Integration error
+3,Exception condition,Through testing with different test cases,insufficient Testing
+4,Incorrect results even after following the requirement specification,Rework on the correct requirement,Incorrect requirment documentation

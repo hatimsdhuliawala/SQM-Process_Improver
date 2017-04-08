@@ -80,6 +80,16 @@ class Dataset5 extends Datasets {
   }
 
 }
+class Dataset6 extends Datasets {
+  constructor(datasetName, parentDiv) {
+    super();
+    this.datasetName=datasetName;
+    this.parentDiv=parentDiv;
+    var test = new renderDatasets(datasetName, parentDiv);
+    test.rederDataset6(datasetName, parentDiv);
+  }
+
+}
 class Dataset7 extends Datasets {
     constructor(datasetName, parentDiv) {
         super();
@@ -87,6 +97,26 @@ class Dataset7 extends Datasets {
         this.parentDiv = parentDiv;
         var test = new renderDatasets(datasetName, parentDiv);
         test.rederDataset7(datasetName, parentDiv);
+    }
+
+}
+class Dataset8 extends Datasets {
+    constructor(datasetName, parentDiv) {
+        super();
+        this.datasetName = datasetName;
+        this.parentDiv = parentDiv;
+        var test = new renderDatasets(datasetName, parentDiv);
+        test.rederDataset8(datasetName, parentDiv);
+    }
+
+}
+class Dataset11 extends Datasets {
+    constructor(datasetName, parentDiv) {
+        super();
+        this.datasetName = datasetName;
+        this.parentDiv = parentDiv;
+        var test = new renderDatasets(datasetName, parentDiv);
+        test.rederDataset11(datasetName, parentDiv);
     }
 
 }
@@ -187,6 +217,8 @@ class renderDatasets {
             console.log(err);
         });
     }
+
+
     rederDataset4(datasetName, parentDiv) {
       DataFrame.fromCSV('datasets/'+datasetName+'.csv').then(
           df => {
@@ -261,6 +293,57 @@ class renderDatasets {
         console.log(err);
     });
   }
+
+  rederDataset6(datasetName, parentDiv) {
+        DataFrame.fromCSV('datasets/' + datasetName + '.csv').then(
+            df => {
+                //console.log(cleanDF.listColumns());
+// assignedTo  closingDate detectedInCycle release milestoneId taskId  projectId status
+
+
+                const selectColumns = df.select('defectId','description','subject','detectedDate','detectedBy',
+                                                  'severity','priority','actualFixTime','estimatedFixTime',
+                                                  'assignedTo','closingDate','detectedInCycle','release',
+                                                  'milestoneId','taskId','projectId','status');
+                var dataset6Data = selectColumns.toCollection();
+                //console.log(test);
+                var thead = '<tr>' +
+                                '<th>defectId</th><th>description</th><th>subject</th><th>detectedDate</th><th>detectedBy</th>'+
+                                '<th>severity</th><th>priority</th><th>actualFixTime</th><th>estimatedFixTime</th>'
+                                '<th>assignedTo</th><th>closingDate</th><th>detectedInCycle</th><th>release</th>'
+                                '<th>milestoneId</th><th>taskId</th><th>projectId</th><th>status</th>';
+                '</tr>';
+                $("#" + parentDiv + "Table thead").html(thead);
+                var tbody = $("#" + parentDiv + "Table tbody");
+
+                for (var i = 0; i < dataset6Data.length; i++) {
+                    var content = '<tr>' +
+                                    '<td>'+dataset6Data[i]["defectId"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["description"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["subject"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["detectedDate"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["detectedBy"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["severity"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["priority"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["actualFixTime"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["estimatedFixTime"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["assignedTo"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["closingDate"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["detectedInCycle"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["release"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["milestoneId"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["taskId"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["projectId"]+'</td>'+
+                                    '<td>'+dataset6Data[i]["status"]+'</td>'+
+                        '</tr>';
+                    $(tbody).append(content);
+                }
+            }
+        ).catch(err => {
+            console.log(err);
+        });
+    }
+
 //User ID Full Name Role  Status  Email Address
 
    rederDataset7(datasetName, parentDiv) {
@@ -269,7 +352,7 @@ class renderDatasets {
                 //console.log(cleanDF.listColumns());
 
                 const selectColumns = df.select('User ID','Full Name','Role','Status','Email Address');
-                var dataset1Data = selectColumns.toCollection();
+                var dataset7Data = selectColumns.toCollection();
                 //console.log(test);
                 var thead = '<tr>' +
                                 '<th>User ID</th><th>Full Name</th><th>Role</th><th>Status</th><th>Email Address</th>';
@@ -277,13 +360,81 @@ class renderDatasets {
                 $("#" + parentDiv + "Table thead").html(thead);
                 var tbody = $("#" + parentDiv + "Table tbody");
 
-                for (var i = 0; i < dataset1Data.length; i++) {
+                for (var i = 0; i < dataset7Data.length; i++) {
                     var content = '<tr>' +
-                                    '<td>'+dataset1Data[i]["User ID"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Full Name"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Role"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Status"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Email Address"]+'</td>'+
+                                    '<td>'+dataset7Data[i]["User ID"]+'</td>'+
+                                    '<td>'+dataset7Data[i]["Full Name"]+'</td>'+
+                                    '<td>'+dataset7Data[i]["Role"]+'</td>'+
+                                    '<td>'+dataset7Data[i]["Status"]+'</td>'+
+                                    '<td>'+dataset7Data[i]["Email Address"]+'</td>'+
+                        '</tr>';
+                    $(tbody).append(content);
+                }
+            }
+        ).catch(err => {
+            console.log(err);
+        });
+    }
+
+    rederDataset8(datasetName, parentDiv) {
+        DataFrame.fromCSV('datasets/' + datasetName + '.csv').then(
+            df => {
+                //console.log(cleanDF.listColumns());
+//lessonId  problemDesc solution  rootCause
+
+                const selectColumns = df.select('lessonId','problemDesc','solution','rootCause');
+                var dataset8Data = selectColumns.toCollection();
+                //console.log(test);
+                var thead = '<tr>' +
+                                '<th>lessonId</th><th>problemDesc</th><th>solution</th><th>rootCause</th>';
+
+                '</tr>';
+                $("#" + parentDiv + "Table thead").html(thead);
+                var tbody = $("#" + parentDiv + "Table tbody");
+
+                for (var i = 0; i < dataset8Data.length; i++) {
+                    var content = '<tr>' +
+                                    '<td>'+dataset8Data[i]["lessonId"]+'</td>'+
+                                    '<td>'+dataset8Data[i]["problemDesc"]+'</td>'+
+                                    '<td>'+dataset8Data[i]["solution"]+'</td>'+
+                                    '<td>'+dataset8Data[i]["rootCause"]+'</td>'+
+                                   
+                        '</tr>';
+                    $(tbody).append(content);
+                }
+            }
+        ).catch(err => {
+            console.log(err);
+        });
+    }
+
+     rederDataset11(datasetName, parentDiv) {
+        DataFrame.fromCSV('datasets/' + datasetName + '.csv').then(
+            df => {
+                //console.log(cleanDF.listColumns());
+//ProjectId Name  MgrId StartDate EndDate ReleaseDate Release Status  Description
+
+                const selectColumns = df.select('ProjectId','Name','MgrId','StartDate','EndDate','ReleaseDate','Release','Status','Description');
+                var dataset11Data = selectColumns.toCollection();
+                //console.log(test);
+                var thead = '<tr>' +
+                                '<th>ProjectId</th><th>Name</th><th>MgrId</th><th>StartDate</th><th>EndDate</th>'+
+                                '<th>ReleaseDate</th><th>Release</th><th>Status</th><th>Description</th>';
+                '</tr>';
+                $("#" + parentDiv + "Table thead").html(thead);
+                var tbody = $("#" + parentDiv + "Table tbody");
+
+                for (var i = 0; i < dataset11Data.length; i++) {
+                    var content = '<tr>' +
+                                    '<td>'+dataset11Data[i]["ProjectId"]+'</td>'+
+                                    '<td>'+dataset11Data[i]["Name"]+'</td>'+
+                                    '<td>'+dataset11Data[i]["MgrId"]+'</td>'+
+                                    '<td>'+dataset11Data[i]["StartDate"]+'</td>'+
+                                    '<td>'+dataset11Data[i]["EndDate"]+'</td>'+
+                                    '<td>'+dataset11Data[i]["ReleaseDate"]+'</td>'+
+                                    '<td>'+dataset11Data[i]["Release"]+'</td>'+
+                                    '<td>'+dataset11Data[i]["Status"]+'</td>'+
+                                    '<td>'+dataset11Data[i]["Description"]+'</td>'+
                         '</tr>';
                     $(tbody).append(content);
                 }

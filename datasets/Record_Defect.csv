@@ -1,0 +1,5 @@
+defectId,description,subject,detectedDate,detectedBy,severity,priority,actualFixTime,estimatedFixTime,assignedTo,closingDate,detectedInCycle,release,milestoneId,taskId,projectId,status
+1,Form input  error ,User Experience,4/5/2016,Hatim,Low,Medium,2 weeks,1 week,Hatim,4/25/2016,User Aceeptance,5/10/2016,User Aceeptance,111,11,Success
+2,Broken workflow,Coding,3/3/2014,Karthik,High,High,4 weeks,10 weeks,Karthik,7/3/2014,Integartion,7/20/2014,Integartion,112,12,Success
+3,Exception condition,Testing,9/10/2011,Nikil,Medium,Medium,1 week,2 weeks,Nikil,9/30/2011,Testing,12/10/2011,Testing,113,13,Success
+4,Incorrect results even after following the requirement specification,Documentation,4/5/2015,Zainab,High,High,8 weeks,15 weeks,Zainab,6/5/2015,Testing,6/20/2015,Testing,114,14,Success
