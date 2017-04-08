@@ -164,7 +164,7 @@ class renderDatasets {
                 var tbody = $("#" + parentDiv + "Table tbody");
 
                 for (var i = 0; i < dataset2Data.length; i++) { 
-                    if (i==3){var content = '<tr>' +
+                    if (i==4){var content = '<tr>' +
                                     '<td><Strong>'+dataset2Data[i]["Project Title:"]+'</strong></td>'+
                                     '<td><Strong>'+dataset2Data[i]["Mercy Hospital"]+'</strong></td>'+
                                     '<td><Strong>'+dataset2Data[i]["  "]+'</strong></td>'+
@@ -202,7 +202,7 @@ class renderDatasets {
                 var tbody = $("#" + parentDiv + "Table tbody");
 
                 for (var i = 0; i < dataset1Data.length; i++) { 
-                    if (i==3){var content = '<tr>' +
+                    if (i==5){var content = '<tr>' +
                                     '<td><Strong>'+dataset1Data[i]["Project Title:"]+'</strong></td>'+
                                     '<td><Strong>'+dataset1Data[i]["Mercy Hospital"]+'</strong></td>'+
                                     '<td><Strong>'+dataset1Data[i]["  "]+'</strong></td>'+
