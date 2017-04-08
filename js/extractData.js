@@ -80,6 +80,16 @@ class Dataset5 extends Datasets {
   }
 
 }
+class Dataset7 extends Datasets {
+    constructor(datasetName, parentDiv) {
+        super();
+        this.datasetName = datasetName;
+        this.parentDiv = parentDiv;
+        var test = new renderDatasets(datasetName, parentDiv);
+        test.rederDataset7(datasetName, parentDiv);
+    }
+
+}
 class renderDatasets {
     constructor(datasetName, parentDiv) {
         this.datasetName = datasetName;
@@ -251,6 +261,37 @@ class renderDatasets {
         console.log(err);
     });
   }
+//User ID Full Name Role  Status  Email Address
+
+   rederDataset7(datasetName, parentDiv) {
+        DataFrame.fromCSV('datasets/' + datasetName + '.csv').then(
+            df => {
+                //console.log(cleanDF.listColumns());
+
+                const selectColumns = df.select('User ID','Full Name','Role','Status','Email Address');
+                var dataset1Data = selectColumns.toCollection();
+                //console.log(test);
+                var thead = '<tr>' +
+                                '<th>User ID</th><th>Full Name</th><th>Role</th><th>Status</th><th>Email Address</th>';
+                '</tr>';
+                $("#" + parentDiv + "Table thead").html(thead);
+                var tbody = $("#" + parentDiv + "Table tbody");
+
+                for (var i = 0; i < dataset1Data.length; i++) {
+                    var content = '<tr>' +
+                                    '<td>'+dataset1Data[i]["User ID"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["Full Name"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["Role"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["Status"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["Email Address"]+'</td>'+
+                        '</tr>';
+                    $(tbody).append(content);
+                }
+            }
+        ).catch(err => {
+            console.log(err);
+        });
+    }
 }
 /*class PlotChart {
     constructor(datasetName) {
