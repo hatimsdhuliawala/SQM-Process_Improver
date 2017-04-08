@@ -82,9 +82,9 @@
 
                       <li><a href="#dataset8" data-toggle="tab" dataset-name="Record_lessons_learned" dataset-id="dataset8">Record Lessons Learned</a></li>
 
-                      <li><a href="#dataset9" data-toggle="tab" dataset-name="Blank" dataset-id="dataset9">Employees Training</a></li>
+                      <li><a href="#dataset9" data-toggle="tab" dataset-name="EmployeeTraining" dataset-id="dataset9">Employees Training</a></li>
 
-                      <li><a href="#dataset10" data-toggle="tab" dataset-name="Blank" dataset-id="dataset10">Rate an Engineer</a></li>
+                      <li><a href="#dataset10" data-toggle="tab" dataset-name="Ratings" dataset-id="dataset10">Rate an Engineer</a></li>
 
                       <li><a href="#dataset11" data-toggle="tab" dataset-name="CompletedProject" dataset-id="dataset11">View Completed Projects</a></li>
 
@@ -284,7 +284,7 @@
                           </table>
                         </div>
                       </div>
-                       <div class="tab-pane fade" id="dataset9" dataset-name="Blank">
+                       <div class="tab-pane fade" id="dataset9" dataset-name="EmployeeTraining">
                         <div class="col-xs-12 table-overflow">
                           <h6><strong>Employees Training</strong></h6>
                           <table id="dataset9Table" class="table table-striped dataset-table">
@@ -293,7 +293,7 @@
                           </table>
                         </div>
                       </div>
-                       <div class="tab-pane fade" id="dataset10" dataset-name="Blank">
+                       <div class="tab-pane fade" id="dataset10" dataset-name="Ratings">
                         <div class="col-xs-12 table-overflow">
                           <h6><strong>Rate an Engineer</strong></h6>
                           <table id="dataset10Table" class="table table-striped dataset-table">
@@ -472,6 +472,10 @@
           renderD = new Dataset7('UsersAccounts', 'dataset7');
           //Render dataset8
           renderD = new Dataset8('Record_lessons_learned', 'dataset8');
+          //Render dataset9
+          renderD = new Dataset9('EmployeeTraining', 'dataset9');
+          //Render dataset10
+          renderD = new Dataset10('Ratings', 'dataset10');
           //Render dataset11
           renderD = new Dataset11('CompletedProject', 'dataset11');
           //Hide Page spinner

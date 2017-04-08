@@ -110,6 +110,26 @@ class Dataset8 extends Datasets {
     }
 
 }
+class Dataset9 extends Datasets {
+    constructor(datasetName, parentDiv) {
+        super();
+        this.datasetName = datasetName;
+        this.parentDiv = parentDiv;
+        var test = new renderDatasets(datasetName, parentDiv);
+        test.rederDataset9(datasetName, parentDiv);
+    }
+
+}
+class Dataset10 extends Datasets {
+    constructor(datasetName, parentDiv) {
+        super();
+        this.datasetName = datasetName;
+        this.parentDiv = parentDiv;
+        var test = new renderDatasets(datasetName, parentDiv);
+        test.rederDataset10(datasetName, parentDiv);
+    }
+
+}
 class Dataset11 extends Datasets {
     constructor(datasetName, parentDiv) {
         super();
@@ -417,6 +437,71 @@ class renderDatasets {
                                     '<td>'+dataset8Data[i]["solution"]+'</td>'+
                                     '<td>'+dataset8Data[i]["rootCause"]+'</td>'+
                                    
+                        '</tr>';
+                    $(tbody).append(content);
+                }
+            }
+        ).catch(err => {
+            console.log(err);
+        });
+    }
+
+     rederDataset9(datasetName, parentDiv) {
+        DataFrame.fromCSV('datasets/' + datasetName + '.csv').then(
+            df => {
+                //console.log(cleanDF.listColumns());
+//trainingid    name    duartion    cost    type    description externalLink
+
+                const selectColumns = df.select('trainingid','name','duartion','cost','type','description','externalLink');
+                var dataset9Data = selectColumns.toCollection();
+                //console.log(test);
+                var thead = '<tr>' +
+                                '<th>trainingid</th><th>name</th><th>duartion</th><th>cost</th>'+
+                                '<th>type</th><th>description</th><th>externalLink</th>';
+                            '</tr>';
+                $("#" + parentDiv + "Table thead").html(thead);
+                var tbody = $("#" + parentDiv + "Table tbody");
+
+                for (var i = 0; i < dataset9Data.length; i++) {
+                    var content = '<tr>' +
+                                    '<td>'+dataset9Data[i]["trainingid"]+'</td>'+
+                                    '<td>'+dataset9Data[i]["name"]+'</td>'+
+                                    '<td>'+dataset9Data[i]["duartion"]+'</td>'+
+                                    '<td>'+dataset9Data[i]["cost"]+'</td>'+
+                                    '<td>'+dataset9Data[i]["type"]+'</td>'+
+                                    '<td>'+dataset9Data[i]["description"]+'</td>'+
+                                    '<td>'+dataset9Data[i]["externalLink"]+'</td>'+                                                       
+                        '</tr>';
+                    $(tbody).append(content);
+                }
+            }
+        ).catch(err => {
+            console.log(err);
+        });
+    }
+
+       rederDataset10(datasetName, parentDiv) {
+        DataFrame.fromCSV('datasets/' + datasetName + '.csv').then(
+            df => {
+                //console.log(cleanDF.listColumns());
+//Rater Name    Engineer Name   Rating  Comments
+
+                const selectColumns = df.select('Rater Name','Engineer Name','Rating','Comments');
+                var dataset10Data = selectColumns.toCollection();
+                //console.log(test);
+                var thead = '<tr>' +
+                                '<th>Rater Name</th><th>Engineer Name</th><th>Rating</th><th>Comments</th>';
+                '</tr>';
+                $("#" + parentDiv + "Table thead").html(thead);
+                var tbody = $("#" + parentDiv + "Table tbody");
+
+                for (var i = 0; i < dataset10Data.length; i++) {
+                    var content = '<tr>' +
+                                    '<td>'+dataset10Data[i]["Rater Name"]+'</td>'+
+                                    '<td>'+dataset10Data[i]["Engineer Name"]+'</td>'+
+                                    '<td>'+dataset10Data[i]["Rating"]+'</td>'+
+                                    '<td>'+dataset10Data[i]["Comments"]+'</td>'+
+                                    
                         '</tr>';
                     $(tbody).append(content);
                 }
