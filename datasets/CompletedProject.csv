@@ -1,27 +1,1 @@
-ProjectId,Name,MgrId,StartDate,EndDate,ReleaseDate,Release,Status,Description
-1,KYC,45234,1/30/2015,6/15/2015,6/19/2015,15.1,production,KYC new initiative
-2,Strategic Statements,45458,5/12/2015,11/17/2015,11/20/2015,15.2,production,Support Strategic statements with the legacy systems
-3,Mosaic-Revamp Services,44273,1/5/2016,8/17/2016,8/19/2016,16.1,production,Service revamp. SOAP to REST migration
-4,BankOne,45987,9/4/2016,5/17/2017,5/19/2017,17.0,testing,Bank One services
-5,Tax Form Data,45615,2/17/2017,6/27/2017,6/30/2017,17.1,coding,New workflow for Tax Form Data
-6,MergeOne,43954,3/20/2017,7/25/2017,7/28/2017,17.2,requirements,Merge Bank One
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
+ProjectId,Name,MgrId,StartDate,EndDate,ReleaseDate,Release,Status,Description1,KYC,45234,1/30/15,6/15/15,6/19/15,15.1,production,KYC new initiative2,Strategic Statements,45458,5/12/15,11/17/15,11/20/15,15.2,production,Support Strategic statements with the legacy systems3,Mosaic-Revamp Services,44273,1/5/16,8/17/16,8/19/16,16.1,production,Service revamp. SOAP to REST migration4,BankOne,45987,9/4/16,5/17/17,5/19/17,17,testing,Bank One services5,Tax Form Data,45615,2/17/17,6/27/17,6/30/17,17.1,coding,New workflow for Tax Form Data6,MergeOne,43954,3/20/17,7/25/17,7/28/17,17.2,requirements,Merge Bank One

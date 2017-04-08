@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <title>Process Improver</title>
+    <title>Software Quality Management</title>
     <!-- Scripts -->
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/dataframe.js"></script>
@@ -44,7 +44,7 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">SoftwareQualityManagement</a>
+                    <a class="navbar-brand" href="#">Process Improver</a>
                 </div>
             </div>
         </nav>
@@ -55,8 +55,8 @@
           <div class="row">
             <div class="col-xs-12">
               <blockquote class="blockquote-reverse">
-                <p>Education is what remians after one has forgotten everything he learned <strong>in school</strong></p>
-                <small> <cite title="Source Title">- Einstein</cite></small>
+                <p><strong>Software Quality Management</strong> is a management process that aims to develop and manage the quality of software to make sure the product satisfies the user.</p>
+                <small> <cite title="Source Title">- Internation Strandard Organization</cite></small>
               </blockquote>
             </div>
             <div class="col-xs-12">
@@ -66,9 +66,9 @@
                 </div>
                 <div class="panel-body">
                   <ul class="nav nav-tabs select-datasets-tab">
-                      <li class="active"><a href="#dataset1" data-toggle="tab" dataset-name="Project" dataset-id="dataset1" data-toggle="tab">New Projects</a></li>
+                      <li class="active"><a href="#dataset1" data-toggle="tab" dataset-name="NewProject" dataset-id="dataset1" data-toggle="tab">New Projects</a></li>
                       
-                      <li><a href="#dataset2" data-toggle="tab" dataset-name="Blank" dataset-id="dataset2">Update a Project</a></li>
+                      <li><a href="#dataset2" data-toggle="tab" dataset-name="UpdateProject" dataset-id="dataset2">Update a Project</a></li>
                       
                       <li><a href="#dataset3" data-toggle="tab" dataset-name="Milestones" dataset-id="dataset3">Record Milestone Completion Dates</a></li>
                       
@@ -93,14 +93,18 @@
 
                     </ul>
                     <div id="myTabContent" class="tab-content">
-                      <div class="tab-pane fade active in" id="dataset1" dataset-name="Project">
+                      <div class="tab-pane fade active in" id="dataset1" dataset-name="NewProject">
                         <div class="col-xs-12 table-overflow">
                           <h6><strong>New Projects</strong></h6>
                           <table id="dataset1Table" class="table table-striped dataset-table">
                               <thead></thead>
                               <tbody class="tbody"></tbody>
-                          </table>
 
+                          </table>
+                            <div class="col-lg-10 col-lg-offset-2 text-right">
+                             <a href="#" id="PlotChart1" class="btn btn-primary mrL-15 mrR-10">Submit</a>
+                               <button type="reset" class="btn btn-default">Cancel</button>
+                             </div>
                         </div>
                     <form class="form-horizontal">
                           <fieldset>
@@ -192,7 +196,7 @@
 
 
                       </div>
-                      <div class="tab-pane fade" id="dataset2" dataset-name="Blank">
+                      <div class="tab-pane fade" id="dataset2" dataset-name="UpdateProject">
                         <div class="col-xs-12 table-overflow">
                           <h6><strong>Update a Project</strong></h6>
                           <table id="dataset2Table" class="table table-striped dataset-table">
@@ -215,6 +219,12 @@
                               <tbody class="tbody"></tbody>
                           </table>
                         </div>
+                        <br><br>
+                        <h6><strong>Search for a Project</strong></h6>
+                          <div>
+                        <label>Enter the Project ID:</label>
+                  <input type = "text" style="border:1px solid" />
+                  <br><br><button type="button" onclick="showDiv()">Search</button></div>
                       </div>
                       <div class="tab-pane fade" id="dataset4" dataset-name="Resources_Data">
                         <div class="col-xs-12 table-overflow">
@@ -233,6 +243,12 @@
                               <tbody class="tbody"></tbody>
                           </table>
                         </div>
+                        <br><br>
+                        <h6><strong>Search for a Project</strong></h6>
+                          <div>
+                        <label>Enter the Project ID:</label>
+                  <input type = "text" style="border:1px solid" />
+                  <br><br><button type="button" onclick="showDiv()">Search</button></div>
                       </div>
                        <div class="tab-pane fade" id="dataset6" dataset-name="Record_Defect">
                         <div class="col-xs-12 table-overflow">
@@ -242,6 +258,13 @@
                               <tbody class="tbody"></tbody>
                           </table>
                         </div>
+                        <br><br>
+                        <h6><strong>Search for a Defects</strong></h6>
+                          <div>
+                        <label>Enter the Project ID:</label>
+                  <input type = "text" style="border:1px solid" />
+                  <br><br><button type="button" onclick="showDiv()">Search</button></div>
+
                       </div>
                        <div class="tab-pane fade" id="dataset7" dataset-name="UsersAccounts">
                         <div class="col-xs-12 table-overflow">
@@ -287,6 +310,18 @@
                               <tbody class="tbody"></tbody>
                           </table>
                         </div>
+                          <div>
+                                    <label>Enter Project Type:</label>
+                                    <input type = "text" style="border:1px solid" />
+                                    <br><label>Enter Project Technologies Used:</label>
+                                    <input type = "text" style="border:1px solid" />
+                                    <br><label>Enter Resource Name:</label>
+                                    <input type = "text" style="border:1px solid" />
+                                    <br><br><button type="button" onclick="showDiv()">Search</button>
+                                    <script>
+                                       function showDiv() { document.getElementById('dataset3Table').style.display = "block";}
+                                    </script>
+                                 </div>
                       </div>
                     </div>
                 </div>
@@ -305,7 +340,7 @@
         <div class="container-fluid">
             <div class="col-md-12 mrT-5 mrB-10">
                 <div class="row clear-both color-grey">
-                    <div class="text-center footer-links">©2017 Education- UML
+                    <div class="text-center footer-links">©2017 Process Improver- SQM
                     </div>
                 </div>
 
@@ -422,9 +457,9 @@
         $(window).on('load', function () {
 
           //Render dataset1
-          renderD = new Dataset1('Project', 'dataset1');
+          renderD = new Dataset1('NewProject', 'dataset1');
           //Render dataset2
-          renderD = new Dataset2('', 'dataset2');
+          renderD = new Dataset2('UpdateProject', 'dataset2');
           //Render dataset3
           renderD = new Dataset3('Milestones', 'dataset3');
           //Render dataset4

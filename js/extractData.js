@@ -134,20 +134,30 @@ class renderDatasets {
                 //console.log(groupedDF.aggregate(group => group.count()));
 
                 //console.log(cleanDF.listColumns());
-                const selectColumns = df.select('');
-                dataset2Data = selectColumns.toCollection();
+                const selectColumns = df.select('Project Title:','Mercy Hospital','  ','  ');
+                var dataset2Data = selectColumns.toCollection();
                 //console.log(test);
                 var thead = '<tr>' +
-                    '';
+                                '<th>Project Title:</th><th>Mercy Hospital</th><th>  </th><th>  </th>';
                 '</tr>';
                 $("#" + parentDiv + "Table thead").html(thead);
                 var tbody = $("#" + parentDiv + "Table tbody");
 
-                for (var i = 0; i < dataset2Data.length; i++) {
-                    var content = '<tr>' +
-                        '<td>' +'</td>' +
-                       
-                        '</tr>';
+                for (var i = 0; i < dataset2Data.length; i++) { 
+                    if (i==3){var content = '<tr>' +
+                                    '<td><Strong>'+dataset2Data[i]["Project Title:"]+'</strong></td>'+
+                                    '<td><Strong>'+dataset2Data[i]["Mercy Hospital"]+'</strong></td>'+
+                                    '<td><Strong>'+dataset2Data[i]["  "]+'</strong></td>'+
+                                    '<td><Strong>'+dataset2Data[i]["  "]+'</strong></td>'+
+                        '</tr>';}else{
+                   
+                    
+                   var content = '<tr>' +
+                                    '<td><Strong>'+dataset2Data[i]["Project Title:"]+'</strong></td>'+
+                                    '<td>'+dataset2Data[i]["Mercy Hospital"]+'</td>'+
+                                    '<td>'+dataset2Data[i]["  "]+'</td>'+
+                                    '<td>'+dataset2Data[i]["  "]+'</td>'+
+                        '</tr>';}
                     $(tbody).append(content);
                 }
             }
@@ -162,22 +172,30 @@ class renderDatasets {
             df => {
                 //console.log(cleanDF.listColumns());
 
-                const selectColumns = df.select('Task','Start Date','End Date','Resources');
+                const selectColumns = df.select('Project Title:','Mercy Hospital','  ','  ');
                 var dataset1Data = selectColumns.toCollection();
                 //console.log(test);
                 var thead = '<tr>' +
-                                '<th>Task</th><th>Start Date</th><th>End Date</th><th>Resources</th>';
+                                '<th>Project Title:</th><th>Mercy Hospital</th><th>  </th><th>  </th>';
                 '</tr>';
                 $("#" + parentDiv + "Table thead").html(thead);
                 var tbody = $("#" + parentDiv + "Table tbody");
 
-                for (var i = 0; i < dataset1Data.length; i++) {
-                    var content = '<tr>' +
-                                    '<td>'+dataset1Data[i]["Task"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Start Date"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["End Date"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Resources"]+'</td>'+
-                        '</tr>';
+                for (var i = 0; i < dataset1Data.length; i++) { 
+                    if (i==3){var content = '<tr>' +
+                                    '<td><Strong>'+dataset1Data[i]["Project Title:"]+'</strong></td>'+
+                                    '<td><Strong>'+dataset1Data[i]["Mercy Hospital"]+'</strong></td>'+
+                                    '<td><Strong>'+dataset1Data[i]["  "]+'</strong></td>'+
+                                    '<td><Strong>'+dataset1Data[i]["  "]+'</strong></td>'+
+                        '</tr>';}else{
+                   
+                    
+                   var content = '<tr>' +
+                                    '<td><Strong>'+dataset1Data[i]["Project Title:"]+'</strong></td>'+
+                                    '<td>'+dataset1Data[i]["Mercy Hospital"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["  "]+'</td>'+
+                                    '<td>'+dataset1Data[i]["  "]+'</td>'+
+                        '</tr>';}
                     $(tbody).append(content);
                 }
             }
