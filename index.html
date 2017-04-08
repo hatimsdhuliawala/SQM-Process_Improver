@@ -76,17 +76,17 @@
                       
                       <li><a href="#dataset5" data-toggle="tab" dataset-name="Tasks" dataset-id="dataset5">Record Tasks Completion Dates</a></li>
 
-                      <li><a href="#dataset6" data-toggle="tab" dataset-name="Blank" dataset-id="dataset6">Record Defects</a></li>
+                      <li><a href="#dataset6" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record Defects</a></li>
 
-                      <li><a href="#dataset7" data-toggle="tab" dataset-name="Blank" dataset-id="dataset7">Record a Problem &apm; Solution</a></li>
+                      <li><a href="#dataset7" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record a Problem &apm; Solution</a></li>
 
-                      <li><a href="#dataset8" data-toggle="tab" dataset-name="Blank" dataset-id="dataset8">Record Lessons Learned</a></li>
+                      <li><a href="#dataset8" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record Lessons Learned</a></li>
 
-                      <li><a href="#dataset9" data-toggle="tab" dataset-name="Blank" dataset-id="dataset9">Employees Training</a></li>
+                      <li><a href="#dataset9" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Employees Training</a></li>
 
-                      <li><a href="#dataset10" data-toggle="tab" dataset-name="Blank" dataset-id="dataset10">Rate an Engineer</a></li>
+                      <li><a href="#dataset10" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Rate an Engineer</a></li>
 
-                      <li><a href="#dataset11" data-toggle="tab" dataset-name="Blank" dataset-id="dataset11">View Completed Projects</a></li>
+                      <li><a href="#dataset11" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">View Completed Projects</a></li>
 
 
 
@@ -102,12 +102,11 @@
                           </table>
 
                         </div>
-                        
-                        <form class="form-horizontal">
+                    <form class="form-horizontal">
                           <fieldset>
-                           
+                          
                           <div class="form-group">
-                             <label class="col-lg-2 control-label"></label>
+                             <label class="col-lg-2 control-label">Charts Plot </label>
                              <div class="col-lg-10">
                                
                              </div>
@@ -130,7 +129,7 @@
                                   </div>
                                   <div id="collapseOne" class="panel-collapse collapse">
                                       <div class="panel-body">
-                                          <h6 class="text-center"><strong>Number of Projects</strong></h6>
+                                          <h6 class="text-center"><strong>Number of Schools / Zip code</strong></h6>
                                           <canvas id="dataset1BarChart" width="400" height="auto"></canvas>
                                       </div>
                                   </div>
@@ -143,7 +142,7 @@
                                 </div>
                                   <div id="collapseTwo" class="panel-collapse collapse">
                                       <div class="panel-body">
-                                          <h6 class="text-center"><strong>Defects</strong></h6>
+                                          <h6 class="text-center"><strong>School and their Safety</strong></h6>
                                           <canvas id="dataset1PieChart" width="400" height="100"></canvas>
                                       </div>
                                   </div>
@@ -157,7 +156,7 @@
                                 </div>
                                   <div id="collapseThree" class="panel-collapse collapse">
                                       <div class="panel-body">
-                                        <h6 class="text-center"><strong>Resources Used</strong></h6>
+                                        <h6 class="text-center"><strong>Schools / Zip code</strong></h6>
                                           <canvas id="dataset1LineChart" width="400" height="auto"></canvas>
                                       </div>
                                   </div>
@@ -201,12 +200,12 @@
                               <tbody class="tbody"></tbody>
                           </table>
                         </div>
-                          <div class="col-xs-12 table-overflow">
-                          <h6><strong>Search for a Project</strong></h6>
+                        <br><br>
+                        <h6><strong>Search for a Project</strong></h6>
                           <div>
                         <label>Enter the Project ID:</label>
                   <input type = "text" style="border:1px solid" />
-                  <br><br><button type="button" onclick="showDiv()">Search</button>
+                  <br><br><button type="button" onclick="showDiv()">Search</button></div>
                       </div>
                       <div class="tab-pane fade" id="dataset3" dataset-name="Milestones">
                         <div class="col-xs-12 table-overflow">
@@ -425,7 +424,7 @@
           //Render dataset1
           renderD = new Dataset1('Project', 'dataset1');
           //Render dataset2
-         // renderD = new Dataset2('', 'dataset2');
+          renderD = new Dataset2('', 'dataset2');
           //Render dataset3
           renderD = new Dataset3('Milestones', 'dataset3');
           //Render dataset4
@@ -577,7 +576,7 @@
 //             ],
 //             borderWidth: 1
 //         },
-// 		{
+//    {
 //             label: 'Average Teacher Attendance',
 //             data: [15, 19, 3, 5, 2, 3],
 //             backgroundColor: [
@@ -602,13 +601,13 @@
 //     options: {
 //         scales: {
 //             yAxes: [{
-// 				stacked: true,
+//        stacked: true,
 //                 ticks: {
 //                     beginAtZero:true
 //                 }
 //             }],
 //             xAxes: [{
-// 				stacked: true,
+//        stacked: true,
 //                 ticks: {
 //                     beginAtZero:true
 //                 }
