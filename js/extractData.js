@@ -122,21 +122,21 @@ class renderDatasets {
             df => {
                 //console.log(cleanDF.listColumns());
 
-                const selectColumns = df.select('Resource ID','Project Name','Tools Used','Comments');
+                const selectColumns = df.select('Task','Start Date','End Date','Resources');
                 var dataset1Data = selectColumns.toCollection();
                 //console.log(test);
                 var thead = '<tr>' +
-                                '<th>Resource ID</th><th>Project Name</th><th>Tools Used</th><th>Comments</th>'
+                                '<th>Task</th><th>Start Date</th><th>End Date</th><th>Resources</th>';
                 '</tr>';
                 $("#" + parentDiv + "Table thead").html(thead);
                 var tbody = $("#" + parentDiv + "Table tbody");
 
                 for (var i = 0; i < dataset1Data.length; i++) {
                     var content = '<tr>' +
-                                    '<td>'+dataset1Data[i]["Resource ID"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Project Name"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Tools Used"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["Comments"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["Task"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["Start Date"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["End Date"]+'</td>'+
+                                    '<td>'+dataset1Data[i]["Resources"]+'</td>'+
                         '</tr>';
                     $(tbody).append(content);
                 }
@@ -155,20 +155,20 @@ class renderDatasets {
                 //console.log(groupedDF.aggregate(group => group.count()));
 
                 //console.log(cleanDF.listColumns());
-                const selectColumns = df.select('');
+                const selectColumns = df.select('Milestone','Actual Completion Date');
 
                 dataset3Data = selectColumns.toCollection();
                 //console.log(test);
                 var thead = '<tr>' +
-                    
+                              '<th>Milestone</th><th>Actual Completion Date</th>'
                 '</tr>';
                 $("#" + parentDiv + "Table thead").html(thead);
                 var tbody = $("#" + parentDiv + "Table tbody");
 
                 for (var i = 0; i < dataset3Data.length; i++) {
                     var content = '<tr>' +
-                        
-                        '<td>'  + '</td>' +
+                                      '<td>'+dataset3Data[i]["Milestone"]+'</td>'+
+                                      '<td>'+dataset3Data[i]["Actual Completion Date"]+'</td>'+
                         '</tr>';
                     $(tbody).append(content);
                 }
@@ -227,18 +227,22 @@ class renderDatasets {
                           //console.log(groupedDF.aggregate(group => group.count()));
 
              //console.log(cleanDF.listColumns());
-             const selectColumns = df.select('');
+             const selectColumns = df.select('Task','Actual Start Date','Actual Completion Date',
+                                              'Resources Worked on the Task');
                 dataset5Data = selectColumns.toCollection();
                  //console.log(test);
                  var thead = '<tr>'+
-                       
+                                    '<th>Task</th><th>Actual Start Date</th><th>Actual Completion Date</th><th>Resources Worked on the Task</th>';
                                '</tr>';
                   $("#"+parentDiv+"Table thead").html(thead);
                   var tbody = $("#"+parentDiv+"Table tbody");
 
             for ( var i = 0; i < dataset5Data.length; i++) {
               var content = '<tr>'+
-                                '<td>'+'</td>'+
+                                '<td>'+dataset5Data[i]["Task"]+'</td>'+
+                                '<td>'+dataset5Data[i]["Actual Start Date"]+'</td>'+
+                                '<td>'+dataset5Data[i]["Actual Completion Date"]+'</td>'+
+                                '<td>'+dataset5Data[i]["Resources Worked on the Task"]+'</td>'+
                             '</tr>';
               $(tbody).append(content);
             }

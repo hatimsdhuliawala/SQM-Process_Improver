@@ -1,3 +1,9 @@
-Resource ID,Project Name,Tools Used,Comments
-400018,Mercy Hospital,Visual Studio,Testing in Progress
-400019,Illinois Institute of Technology,Android SDk,Completed No errors
+Task,Start Date,End Date,Resources
+Gathering Requirements,7/1/2017,7/5/2017,Zainab
+Analysis,7/6/2017,7/10/2017,Hatim
+Analysis Review,7/11/2017,7/12/2017,"Zainab, Hatim"
+Design,7/13/2017,7/20/2017,Nikhil
+Design Review,7/21/2017,7/24/2017,"Nikhil, Zainab"
+Coding,7/25/2017,8/10/2017,Keerthana
+Code Inspection,8/11/2017,8/15/2017,"Karthik, Keerthana"
+Testing,8/16/2017,8/20/2017,Karthik

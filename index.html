@@ -70,23 +70,23 @@
                       
                       <li><a href="#dataset2" data-toggle="tab" dataset-name="Blank" dataset-id="dataset2">Update a Project</a></li>
                       
-                      <li><a href="#dataset3" data-toggle="tab" dataset-name="Blank" dataset-id="dataset3">Record Milestone Completion Dates</a></li>
+                      <li><a href="#dataset3" data-toggle="tab" dataset-name="Milestones" dataset-id="dataset3">Record Milestone Completion Dates</a></li>
                       
                       <li><a href="#dataset4" data-toggle="tab" dataset-name="Resources_Data" dataset-id="dataset4">Manage Resources</a></li>
                       
-                      <li><a href="#dataset5" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record Tasks Completion Dates</a></li>
+                      <li><a href="#dataset5" data-toggle="tab" dataset-name="Tasks" dataset-id="dataset5">Record Tasks Completion Dates</a></li>
 
-                      <li><a href="#dataset6" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record Defects</a></li>
+                      <li><a href="#dataset6" data-toggle="tab" dataset-name="Blank" dataset-id="dataset6">Record Defects</a></li>
 
-                      <li><a href="#dataset7" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record a Problem &apm; Solution</a></li>
+                      <li><a href="#dataset7" data-toggle="tab" dataset-name="Blank" dataset-id="dataset7">Record a Problem &apm; Solution</a></li>
 
-                      <li><a href="#dataset8" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Record Lessons Learned</a></li>
+                      <li><a href="#dataset8" data-toggle="tab" dataset-name="Blank" dataset-id="dataset8">Record Lessons Learned</a></li>
 
-                      <li><a href="#dataset9" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Employees Training</a></li>
+                      <li><a href="#dataset9" data-toggle="tab" dataset-name="Blank" dataset-id="dataset9">Employees Training</a></li>
 
-                      <li><a href="#dataset10" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">Rate an Engineer</a></li>
+                      <li><a href="#dataset10" data-toggle="tab" dataset-name="Blank" dataset-id="dataset10">Rate an Engineer</a></li>
 
-                      <li><a href="#dataset11" data-toggle="tab" dataset-name="Blank" dataset-id="dataset5">View Completed Projects</a></li>
+                      <li><a href="#dataset11" data-toggle="tab" dataset-name="Blank" dataset-id="dataset11">View Completed Projects</a></li>
 
 
 
@@ -203,7 +203,7 @@
                         </div>
 
                       </div>
-                      <div class="tab-pane fade" id="dataset3" dataset-name="Blank">
+                      <div class="tab-pane fade" id="dataset3" dataset-name="Milestones">
                         <div class="col-xs-12 table-overflow">
                           <h6><strong>Record Milestone Completion Dates</strong></h6>
                           <table id="dataset3Table" class="table table-striped dataset-table">
@@ -221,7 +221,7 @@
                           </table>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="dataset5" dataset-name="Blank">
+                      <div class="tab-pane fade" id="dataset5" dataset-name="Tasks">
                         <div class="col-xs-12 table-overflow">
                           <h6><strong>Record Tasks Completion Dates</strong></h6>
                           <table id="dataset5Table" class="table table-striped dataset-table">
@@ -420,13 +420,13 @@
           //Render dataset1
           renderD = new Dataset1('Project', 'dataset1');
           //Render dataset2
-          renderD = new Dataset2('', 'dataset2');
+         // renderD = new Dataset2('', 'dataset2');
           //Render dataset3
-          renderD = new Dataset3('', 'dataset3');
+          renderD = new Dataset3('Milestones', 'dataset3');
           //Render dataset4
           renderD = new Dataset4('Resources_Data', 'dataset4');
           //Render dataset5
-          renderD = new Dataset5('', 'dataset5');
+          renderD = new Dataset5('Tasks', 'dataset5');
           //Hide Page spinner
           $(".page-spinner").fadeOut();
           setTimeout( function () {
