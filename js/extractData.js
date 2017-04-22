@@ -358,8 +358,8 @@ class renderDatasets {
                 //console.log(test);
                 var thead = '<tr>' +
                                 '<th>defectId</th><th>description</th><th>subject</th><th>detectedDate</th><th>detectedBy</th>'+
-                                '<th>severity</th><th>priority</th><th>actualFixTime</th><th>estimatedFixTime</th>'
-                                '<th>assignedTo</th><th>closingDate</th><th>detectedInCycle</th><th>release</th>'
+                                '<th>severity</th><th>priority</th><th>actualFixTime</th><th>estimatedFixTime</th>'+
+                                '<th>assignedTo</th><th>closingDate</th><th>detectedInCycle</th><th>release</th>'+
                                 '<th>milestoneId</th><th>taskId</th><th>projectId</th><th>status</th>';
                 '</tr>';
                 $("#" + parentDiv + "Table thead").html(thead);
