@@ -1,21 +1,23 @@
-Project Title:,Mercy Hospital,   ,  
-Project ID:,123,,
-Project Type:,Health,,
-Project goals:,User friendly,,
-POCs:,Allen Carden,,
-Project Plan:,,,
-Task,Start Date,End Date,Resources
-Gathering Requirements,7/1/2017,7/5/2017,Zainab
-Analysis,7/6/2017,7/10/2017,Hatim
-Analysis Review,7/11/2017,7/12/2017,"Zainab, Hatim"
-Design,7/13/2017,7/20/2017,Nikhil
-Design Review,7/21/2017,7/24/2017,"Nikhil, Zainab"
-Coding,7/25/2017,8/10/2017,Keerthana
-Code Inspection,8/11/2017,8/15/2017,"Karthik, Keerthana"
-Testing,8/16/2017,8/20/2017,Karthik
-Tools Used,Visual Studio,Android SDk,
-Milestones:,,,
-Design,7/24/2017,,
-Coding,8/15/2017,,
-Testing,8/20/2017,,
-Meeting Frequency with POC: ,Weekly,,
+Project Title:,Mercy Hospital,   ,  ,,
+Project ID:,123,,,,
+Project Type:,Health,,,,
+Project goals:,User friendly,,,,
+POC:,Allen Carden,,,,
+POC Email:,Allen.Carden@gmail.com,,,,
+Project Plan:,,,,,
+Task,Start Date,End Date,Resources,,
+Gathering Requirements,7/1/2017,7/5/2017,Zainab,,
+Analysis,7/6/2017,7/10/2017,Hatim,,
+Analysis Review,7/11/2017,7/12/2017,"Zainab, Hatim",,
+Design,7/13/2017,7/20/2017,Nikhil,,
+Design Review,7/21/2017,7/24/2017,"Nikhil, Zainab",,
+Coding,7/25/2017,8/10/2017,Keerthana,,
+Code Inspection,8/11/2017,8/15/2017,"Karthik, Keerthana",,
+Testing,8/16/2017,8/20/2017,Karthik,,
+Tools Used,Visual Studio,Android SDk,,,
+Milestones:,Completion Date,,,,
+Design,7/24/2017,,,,
+Coding,8/15/2017,,,,
+Testing,8/20/2017,,,,
+Meeting Frequency with POC: ,Weekly,,,,
+    ,    ,    ,   ,   ,  
