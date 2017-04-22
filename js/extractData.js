@@ -19,7 +19,7 @@
 //   }
 
 //}
-var dataset1Data, dataset2Data, dataset3Data, dataset4Data, dataset5Data;
+var dataset1Data, dataset2Data, dataset3Data, dataset4Data, dataset5Data,dataset6Data;
 //var chartVar;
 var DataFrame;
 var getData, getPieData,getDoughnutData;
@@ -137,6 +137,17 @@ class Dataset11 extends Datasets {
         this.parentDiv = parentDiv;
         var test = new renderDatasets(datasetName, parentDiv);
         test.rederDataset11(datasetName, parentDiv);
+    }
+
+}
+
+class Dataset12 extends Datasets {
+    constructor(datasetName, parentDiv) {
+        super();
+        this.datasetName = datasetName;
+        this.parentDiv = parentDiv;
+        var test = new renderDatasets(datasetName, parentDiv);
+        test.rederDataset12(datasetName, parentDiv);
     }
 
 }
@@ -538,6 +549,37 @@ class renderDatasets {
                                     '<td>'+dataset11Data[i]["Release"]+'</td>'+
                                     '<td>'+dataset11Data[i]["Status"]+'</td>'+
                                     '<td>'+dataset11Data[i]["Description"]+'</td>'+
+                        '</tr>';
+                    $(tbody).append(content);
+                }
+            }
+        ).catch(err => {
+            console.log(err);
+        });
+    }
+
+
+
+     rederDataset12(datasetName, parentDiv) {
+        DataFrame.fromCSV('datasets/' + datasetName + '.csv').then(
+            df => {
+                //console.log(cleanDF.listColumns());
+//Metric Name   Value
+
+                const selectColumns = df.select('Metric Name','Value');
+                var dataset12Data = selectColumns.toCollection();
+                //console.log(test);
+                var thead = '<tr>' +
+                                '<th>Metric Name</th><th>Value</th>';
+                            '</tr>';
+                $("#" + parentDiv + "Table thead").html(thead);
+                var tbody = $("#" + parentDiv + "Table tbody");
+
+                for (var i = 0; i < dataset12Data.length; i++) {
+                    var content = '<tr>' +
+                                    '<td>'+dataset12Data[i]["Metric Name"]+'</td>'+
+                                    '<td>'+dataset12Data[i]["Value"]+'</td>'+
+                                                                                      
                         '</tr>';
                     $(tbody).append(content);
                 }
