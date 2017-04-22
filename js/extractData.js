@@ -19,7 +19,7 @@
 //   }
 
 //}
-var dataset1Data, dataset2Data, dataset3Data, dataset4Data, dataset5Data,dataset6Data;
+var dataset1Data, dataset2Data, dataset3Data, dataset4Data, dataset5Data, dataset6Data;
 //var chartVar;
 var DataFrame;
 var getData, getPieData,getDoughnutData;
