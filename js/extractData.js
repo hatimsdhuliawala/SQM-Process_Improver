@@ -165,7 +165,7 @@ class renderDatasets {
                 //console.log(groupedDF.aggregate(group => group.count()));
 
                 //console.log(cleanDF.listColumns());
-                const selectColumns = df.select('Project Title:','Mercy Hospital','  ','  ');
+                const selectColumns = df.select('Project Title:','Mercy Hospital','   ','  ');
                 var dataset2Data = selectColumns.toCollection();
                 //console.log(test);
                 var thead = '<tr>' +
@@ -178,7 +178,7 @@ class renderDatasets {
                     if (i==4){var content = '<tr>' +
                                     '<td><Strong>'+dataset2Data[i]["Project Title:"]+'</strong></td>'+
                                     '<td><Strong>'+dataset2Data[i]["Mercy Hospital"]+'</strong></td>'+
-                                    '<td><Strong>'+dataset2Data[i]["  "]+'</strong></td>'+
+                                    '<td><Strong>'+dataset2Data[i]["   "]+'</strong></td>'+
                                     '<td><Strong>'+dataset2Data[i]["  "]+'</strong></td>'+
                         '</tr>';}else{
                    
@@ -186,7 +186,7 @@ class renderDatasets {
                    var content = '<tr>' +
                                     '<td><Strong>'+dataset2Data[i]["Project Title:"]+'</strong></td>'+
                                     '<td>'+dataset2Data[i]["Mercy Hospital"]+'</td>'+
-                                    '<td>'+dataset2Data[i]["  "]+'</td>'+
+                                    '<td>'+dataset2Data[i]["   "]+'</td>'+
                                     '<td>'+dataset2Data[i]["  "]+'</td>'+
                         '</tr>';}
                     $(tbody).append(content);
@@ -203,7 +203,7 @@ class renderDatasets {
             df => {
                 //console.log(cleanDF.listColumns());
 
-                const selectColumns = df.select('Project Title:','Mercy Hospital','  ','  ');
+                const selectColumns = df.select('Project Title:','Mercy Hospital','   ','  ');
                 var dataset1Data = selectColumns.toCollection();
                 //console.log(test);
                 var thead = '<tr>' +
@@ -216,7 +216,7 @@ class renderDatasets {
                     if (i==5){var content = '<tr>' +
                                     '<td><Strong>'+dataset1Data[i]["Project Title:"]+'</strong></td>'+
                                     '<td><Strong>'+dataset1Data[i]["Mercy Hospital"]+'</strong></td>'+
-                                    '<td><Strong>'+dataset1Data[i]["  "]+'</strong></td>'+
+                                    '<td><Strong>'+dataset1Data[i]["   "]+'</strong></td>'+
                                     '<td><Strong>'+dataset1Data[i]["  "]+'</strong></td>'+
                         '</tr>';}else{
                    
@@ -224,7 +224,7 @@ class renderDatasets {
                    var content = '<tr>' +
                                     '<td><Strong>'+dataset1Data[i]["Project Title:"]+'</strong></td>'+
                                     '<td>'+dataset1Data[i]["Mercy Hospital"]+'</td>'+
-                                    '<td>'+dataset1Data[i]["  "]+'</td>'+
+                                    '<td>'+dataset1Data[i]["   "]+'</td>'+
                                     '<td>'+dataset1Data[i]["  "]+'</td>'+
                         '</tr>';}
                     $(tbody).append(content);
